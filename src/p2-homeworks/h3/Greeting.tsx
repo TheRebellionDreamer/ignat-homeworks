@@ -1,28 +1,32 @@
-import React from 'react'
-import s from './Greeting.module.css'
+import cx from 'classnames';
+import React, { ChangeEvent, forwardRef } from 'react';
+import classes from './Greeting.module.css';
 
-type GreetingPropsType = {
-    name: any // need to fix any
-    setNameCallback: any // need to fix any
-    addUser: any // need to fix any
-    error: any // need to fix any
-    totalUsers: any // need to fix any
-}
-
-// презентационная компонента (для верстальщика)
-const Greeting: React.FC<GreetingPropsType> = (
-    {name, setNameCallback, addUser, error, totalUsers} // деструктуризация пропсов
-) => {
-    const inputClass = s.error // need to fix with (?:)
+const Greeting = forwardRef<HTMLInputElement, GreetingPropsType>(
+  ({ name, setNameCallback, addUser, error, totalUsers }, ref) => {
+    const inputClasses = cx(classes.inputContainer, {
+      [classes.error]: error,
+    });
 
     return (
-        <div>
-            <input value={name} onChange={setNameCallback} className={inputClass}/>
-            <span>{error}</span>
-            <button onClick={addUser}>add</button>
-            <span>{totalUsers}</span>
+      <div className={classes.root}>
+        <div className={inputClasses}>
+          <input value={name} onChange={setNameCallback} ref={ref} />
+          {error && <span>{error}</span>}
         </div>
-    )
-}
+        <button onClick={addUser}>add</button>
+        <span>{totalUsers}</span>
+      </div>
+    );
+  },
+);
 
-export default Greeting
+type GreetingPropsType = {
+  name: string;
+  setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void;
+  addUser: () => void;
+  error: string;
+  totalUsers: number;
+};
+
+export default Greeting;

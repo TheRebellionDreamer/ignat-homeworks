@@ -1,7 +1,65 @@
-.someClass {
-
+.root {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 
-.error {
-    border: 1px solid red;
+.root button {
+    height: fit-content;
+    padding: .5rem 1rem;
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
+    background-color: #fffffff5;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.root button:hover {
+    background-color: #f0efeff5;
+}
+
+.root button:active {
+    background-color: #e2e1e1f5;
+}
+
+.root > span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.inputContainer {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputContainer input {
+    height: 25px;
+    font-size: 18px;
+    padding: .5rem 1rem;
+    border-radius: 25px;
+    border: none;
+    transition: all 0.5s;
+    background-color: #fffffff5;
+    color: #00000080;
+}
+
+.inputContainer input:focus {
+    outline: none;
+    box-shadow: 0 0 10px 0px #00000050;
+}
+
+.inputContainer span {
+    font-size: 12px;
+}
+
+.error input {
+    border: 1px solid #FF0000;
+    color: #FF0000;
+}
+
+.error span {
+    color: #FF0000
 }
