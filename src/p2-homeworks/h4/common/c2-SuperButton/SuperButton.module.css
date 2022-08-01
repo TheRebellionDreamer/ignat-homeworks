@@ -1,7 +1,47 @@
 .default {
+    padding: 10px 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    background-color: #FFF;
+    transition: all .3s;
+}
 
+.default:hover {
+    background-color: #efefef;
+    box-shadow: 0 0 5px 0 rgb(155, 154, 154);
+}
+
+.default:active {
+    background-color: #e3e1e1;
+}
+
+.default:focus {
+    outline: none;
+    box-shadow: 0 0 5px 0 rgb(155, 154, 154);
+}
+
+.default:disabled {
+    background-color: #e3e1e1;;
+    box-shadow: none;
 }
 
 .red {
-    background: red;
+    background-color: #FF0000;
+    color: #FFF;
+}
+
+.red:hover {
+    background-color: #ed0000;
+}
+
+.red:active {
+    background-color: #a70000;
+}
+
+.red:disabled {
+    background-color: #a70000;
+    color: #a09f9f
 }
