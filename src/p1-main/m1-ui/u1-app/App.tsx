@@ -5,6 +5,7 @@ import s from './App.module.css';
 function App() {
   return (
     <div className={s.App}>
+      react homeworks
       <HW5 />
     </div>
   );
