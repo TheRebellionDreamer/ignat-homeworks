@@ -1,0 +1,19 @@
+.root {
+  min-width: 100px;
+  padding: 10px 15px;
+  cursor: pointer;
+  appearance: none;
+  background-color: #0000FF10;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all .1s;
+}
+
+.root:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px inset #0000FF50;
+}
+
+.option {
+  background: greenyellow;
+}

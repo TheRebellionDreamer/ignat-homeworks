@@ -1,0 +1,29 @@
+.root {
+  max-width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.radio {
+  appearance: none;
+  border-radius: 2px;
+  width: 15px;
+  height: 15px;
+  background-color: #FFF;
+  border: 1px solid #878787;
+  cursor: pointer;
+}
+
+.radio:checked {
+  background-color: #0000FF80;
+  box-shadow: 0 0 0 2px inset #FFF;
+}
+
+.radio:focus {
+  outline: none;
+  border: 2px solid #0000FF80;
+}
