@@ -1,0 +1,15 @@
+.root {
+  color: black;
+  font-size: 16px;
+}
+
+.root:hover {
+  color: #0000FF;
+  cursor: pointer;
+}
+
+.root:hover:after {
+  content: "Редактировать";
+  font-size: 12px;
+  margin-left: 1rem;
+}
