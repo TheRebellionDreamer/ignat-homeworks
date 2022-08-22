@@ -1,0 +1,26 @@
+.root {
+  width: fit-content;
+  margin-top: 1rem;
+}
+
+.text {
+  text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+  transition: all 0.2s;
+  cursor: pointer;
+  margin: .2rem 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date {
+  opacity: 0;
+}
+
+.date-visible {
+  opacity: 1;
+}
