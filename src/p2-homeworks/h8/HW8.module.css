@@ -1,0 +1,15 @@
+.list {
+  width: 350px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
